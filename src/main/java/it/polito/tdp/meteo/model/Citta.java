@@ -6,11 +6,17 @@ public class Citta {
 	
 	
 	private String nome;
-	private List<Rilevamento> rilevamenti;
-	private int counter = 0;
+	private List<Rilevamento> rilevamenti;	
+	private int counter=0;
 	
-	
-	
+	public int getCounter() {
+		return counter;
+	}
+
+	public void aggiornaCounter(int counter) {
+		this.counter += counter;
+	}
+
 	public Citta(String nome) {
 		this.nome = nome;
 	}
@@ -34,18 +40,6 @@ public class Citta {
 
 	public void setRilevamenti(List<Rilevamento> rilevamenti) {
 		this.rilevamenti = rilevamenti;
-	}
-
-	public int getCounter() {
-		return counter;
-	}
-
-	public void setCounter(int counter) {
-		this.counter = counter;
-	}
-	
-	public void increaseCounter() {
-		this.counter += 1;
 	}
 
 	@Override
